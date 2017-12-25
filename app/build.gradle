@@ -25,8 +25,15 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    /**
+     *  TODO: remove it as soon as possible. The last play-services-ads version (11.8.0)
+     *  is using appcompat-v7 version (25.2.0).
+     **/
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    implementation project(path: ':libjokes')
 }
 
-apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.gms.google-services'
