@@ -22,7 +22,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
@@ -34,7 +34,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation project(path: ':libjokes')
-    compile project(path: ':libjokesandroid')
+    implementation project(path: ':libjokesandroid')
+    implementation project(path: ':backend')
 }
 
 // apply plugin: 'com.google.gms.google-services'
