@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
-
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 16
@@ -17,6 +16,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        paid {
+            // the default configuration is the paid.
+        }
+        free {
+            versionNameSuffix 'free'
+            applicationId 'com.udacity.gradle.builditbigger.free'
         }
     }
 }
@@ -34,7 +42,7 @@ dependencies {
      **/
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-ads:11.8.0'
+    freeCompile 'com.google.android.gms:play-services-ads:11.8.0'
     compile project(path: ':libjokes')
     compile project(path: ':libjokesandroid')
     compile project(path: ':backend', configuration: 'android-endpoints')
