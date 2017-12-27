@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 if(joke != null) {
                     JokeActivity.showJoke(getApplicationContext(), joke);
                 } else {
-                    Toast.makeText(MainActivity.this, "Joke not loaded.\n Please try again", Toast.LENGTH_LONG)
+                    Toast.makeText(MainActivity.this, getString(R.id.joke_load_error_message), Toast.LENGTH_LONG)
                             .show();
                 }
             }

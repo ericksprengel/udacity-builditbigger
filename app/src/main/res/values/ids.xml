@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="joke_load_error_message" type="id">"Joke not loaded.\n Please try again"</item>
+</resources>
